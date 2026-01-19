@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    border: 1px solid transparent; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    border-radius: 15px;
+    width: 30%;
+    height: auto;
+
+}
+
+/* header */
+
+header {
+  display: flex;              /* Activa flexbox */
+  align-items: center;        /* Centra verticalmente */
+  justify-content: space-between; /* Empuja extremos: h1 a la izquierda, img a la derecha */
+  padding: 10px 10px 0;
+  margin-bottom: 30px;
+}
+
+header h1 {
+    flex: 1;                    /* Ocupa espacio disponible */
+    text-align: center;         /* Centra el texto dentro de su área */
+    font-size: 22px;
+}
+
+header img {
+  width: 20px;                /* Ajusta tamaño del icono */
+  height: auto;
+}
+
+.agregarTareas label {
+  display: block;       /* Hace que el label ocupe toda la línea */
+  font-size: 15px;
+  margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+}
+
+.agregarTareas{
+    display: flex;
+    justify-content: center;
+    border: 1px solid transparent; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    margin: 0 10px 30px;
+    border-radius: 5px;
+    padding: 15px 0 15px;
+
+}
+
+.agregarTareas input{
+    width: 26rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.agregarTareas button{
+    height: 2rem;
+    width: 4rem;
+    border-radius: 5px;
+    border: 1px solid ;
+    background-color: #2D5A27;
+    color: white;
+}
+
+.agregarTareas button:hover{
+    background-color: #327a28;
+}
+
+/* Mis tareas */
+
+h2{
+    font-size: 20px;
+    margin: 0 10px;
+    margin-bottom: 30px;
+}
+
+.tareas li{
+    border: 1px solid transparent; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    border-radius: 5px;
+    margin: 0 10px 0px;
+}
+
+.tareas{
+    margin-bottom: 20px;
+}
+
+aside{
+    margin-bottom: 30px;
+    padding: 10px;
+}
