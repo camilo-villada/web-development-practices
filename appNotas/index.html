@@ -20,79 +20,31 @@
         <main>
 
             <section class="agregarTareas">
-
                 <form action="" id="formTareas">
-                    <label for="tareInput">¿Que tienes pendiente?</label>
-                    <input id="tareaInput" type="text" placeholder="Ej.Estudiar JavaScript">
-                    <button type="submit">Agregar</button>
+                    <label for="tareaInput">¿Qué tienes pendiente?</label>
+                    <div class="input-group">
+                        <input id="tareaInput" type="text" placeholder="Ej. Estudiar JavaScript">
+                        <button type="submit">Agregar</button>
+                    </div>
                 </form>
             </section>
 
             <section class="misTareas">
-
                 <h2>Mis tareas</h2>
+                <div class="tareas">
+                    <ul class="lista-tareas" id="listaTareas">
+                        <!-- Aquí se renderizan las tareas -->
+                    </ul>
+                </div>
+            </section>
 
-            <div class="tareas">
-
-                <ul class="lista-tareas" id="listaTareas">
-
-                    <!-- <li class="tarea">
-                        <label class="tarea-info">
-                            <input type="checkbox">
-                            <span>Estudiar JavaScript</span>
-                        </label>
-
-                        <button class="eliminar" aria-label="Eliminar tarea">
-                            Eliminar
-                        </button>
-                    </li> -->
-                    
-                    <!-- <li class="tarea">
-                        <label class="tarea-info">
-                            <input type="checkbox">
-                            <span>Hacer ejercicio</span>
-                        </label>
-
-                        <button class="eliminar" aria-label="Eliminar tarea">
-                            Eliminar
-                        </button>
-                    </li>
-
-                    <li class="tarea">
-                        <label class="tarea-info">
-                            <input type="checkbox">
-                            <span>Practicar CSS Flexbox</span>
-                        </label>
-
-                        <button class="eliminar" aria-label="Eliminar tarea">
-                            Eliminar
-                        </button>
-                    </li>
-
-                    <li class="tarea">
-                        <label class="tarea-info">
-                            <input type="checkbox">
-                            <span>Leer documentacion</span>
-                        </label>
-
-                        <button class="eliminar" aria-label="Eliminar tarea">
-                            Eliminar
-                        </button>
-                    </li> -->
-
-                </ul>
-            </div>
-        </section>
-
-        <aside>
-            <img src="" alt="">
-            <h3>Consejo de estudio</h3>
-            <p>Divide tus tareas grandes en subtareas mas pequeñas para <br> mantener el progreso constante.</p>
-        </aside>
+            <aside>
+                <img src="" alt="">
+                <h3>Consejo de estudio</h3>
+                <p>Divide tus tareas grandes en subtareas más pequeñas para <br> mantener el progreso constante.</p>
+            </aside>
         
         </main>
-
-
     </div>
     
 </body>

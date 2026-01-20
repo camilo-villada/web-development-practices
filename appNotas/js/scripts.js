@@ -24,7 +24,7 @@ form.addEventListener("submit", function (e) {
     const span = document.createElement("span");
     span.textContent = texto;
 
-    // botón eliminar (SIN funcionalidad)
+    // botón eliminar 
     const btnEliminar = document.createElement("button");
     btnEliminar.textContent = "Eliminar";
     btnEliminar.classList.add("eliminar");
