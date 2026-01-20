@@ -1,87 +1,80 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body centrado */
 body {
     display: flex;
     justify-content: center;
+    font-family: sans-serif;
 }
 
+/* Contenedor flexible */
 .container {
-    border: 1px solid transparent; 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    width: 90%;                 /* ocupa casi todo en móviles */
+    max-width: 600px;           /* límite en pantallas grandes */
+    margin: 1rem auto;
+    padding: 1rem;
     border-radius: 15px;
-    width: 30%;
-    height: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* header */
-
+/* Header */
 header {
-    display: flex;              
-    align-items: center;        
-    justify-content: space-between; 
-    padding: 10px 10px 0;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;            /* defensivo: si no cabe, baja */
+    gap: 0.5rem;
 }
 
 header h1 {
-    flex: 1;                    
-    text-align: center;         
-    font-size: 22px;
+    flex: 1;
+    text-align: center;
+    font-size: clamp(1.2rem, 2vw, 2rem); /* escala según pantalla */
 }
 
 header img {
-    width: 20px;                
+    width: clamp(20px, 5vw, 40px);
     height: auto;
 }
 
-/* sección agregar tareas */
-
+/* Sección agregar tareas */
 .agregarTareas {
-    display: flex;
-    justify-content: center;
-    border: 1px solid transparent; 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-    margin: 0 10px 30px;
-    border-radius: 5px;
-    padding: 15px;
-}
-
-.agregarTareas form {
-    width: 100%;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .agregarTareas label {
-    display: block;       
-    font-size: 15px;
-    margin-bottom: 0.5rem; 
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-/* input + botón alineados */
+/* Input + botón */
 .input-group {
     display: flex;
-    flex-wrap: nowrap; /* evita que el botón baje */
-    gap: 10px;
+    gap: 0.5rem;
+    flex-wrap: wrap;            /* defensivo: permite que se apilen */
 }
 
 .input-group input {
-    flex: 1;                          
-    width: clamp(10rem, 80%, 26rem);  
-    height: 2rem;
-    border-radius: 5px;
-    border: 1px solid;
-    box-sizing: border-box;
+    flex: 1;
+    min-width: 150px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
 .input-group button {
-    flex-shrink: 0;   
-    height: 2rem;
-    width: 4rem;
-    border-radius: 5px;
-    border: 1px solid;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #2D5A27;
     background-color: #2D5A27;
     color: white;
 }
@@ -91,43 +84,66 @@ header img {
 }
 
 /* Mis tareas */
-
 h2 {
-    font-size: 20px;
-    margin: 0 10px;
-    margin-bottom: 30px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin: 1rem 0;
+}
+
+.tareas ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .tareas li {
-    border: 1px solid transparent; 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-    border-radius: 5px;
-    margin: 0 10px 0px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.tareas {
-    margin-bottom: 20px;
+.tareas button{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: rgb(199, 199, 199);
 }
 
-.tareas ul{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.tareas button:hover{
+    background-color: rgb(139, 139, 139);
 }
 
 .tarea-info {
-  display: flex;          /* activa flexbox */
-  align-items: center;    /* alinea verticalmente */
-  gap: 8px;               /* separación entre checkbox y span */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-
-
-/* aside */
-
+/* Aside */
 aside {
-    margin-bottom: 30px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;          /* defensivo: se ve bien en cualquier ancho */
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+aside img {
+    width: clamp(30px, 8vw, 60px);
+    height: auto;
+}
+
+aside h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+aside p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.4;
 }
